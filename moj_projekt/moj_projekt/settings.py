@@ -73,10 +73,21 @@ WSGI_APPLICATION = 'moj_projekt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',  # Postavi na PostgreSQL
+        'NAME': 'moja_baza',                  # Ime baze koju si stvorio na Render-u
+        'USER': 'ivanhodzic',                     # Korisničko ime za pristup
+        'PASSWORD': 'jCDa2pIXPcVK4MoyjxOwcRlwPfJSlpqC',                 # Lozinka
+        'HOST': 'dpg-cv9l4hdrie7s73b5vg8g-a.frankfurt-postgres.render.com',                         # Host URL
+        'PORT': '5432',                              # Port, obično 5432
     }
 }
 
